@@ -1,0 +1,144 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+
+  font-family: "Goldman", cursive;
+
+  line-height: 1.3rem;
+  word-spacing: 3px;
+}
+
+h1,
+h2 {
+  color: #19bba0;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 35px;
+}
+h2 {
+  font-size: 25px;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: space-around;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #151520;
+}
+
+section,
+nav {
+  background-color: #090d18;
+}
+
+header,
+main {
+  overflow: hidden;
+  flex: 1;
+  margin: 40px;
+}
+
+main {
+  flex: 3;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+section {
+  box-sizing: border-box;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+
+  font-size: 12pt;
+  padding: 40px;
+
+  color: rgb(184, 228, 236);
+}
+
+.nav-button {
+  width: 10rem;
+  height: 3rem;
+
+  border: 1px solid rgba(255, 255, 255, 0.719);
+
+  background-color: transparent;
+  color: white;
+
+  cursor: pointer;
+
+  user-select: none;
+}
+
+header.selected {
+  animation: menu-pop-in 0.3s forwards linear;
+}
+
+button.selected {
+  background-color: rgba(211, 211, 211, 0.123);
+  animation: button-hover 0.2s forwards linear;
+}
+
+section.selected {
+  animation: content-change 0.8s forwards linear;
+}
+
+#menu-button {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.192);
+}
+
+#menu-button span {
+  font-size: 40px;
+  color: white;
+}
+
+@keyframes button-hover {
+  from {
+    border-top-left-radius: 0%;
+  }
+  to {
+    border-top-left-radius: 2rem;
+  }
+}
+
+@keyframes menu-pop-in {
+  from {
+    left: -120%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes content-change {
+  0% {
+    background-color: rgba(255, 255, 255, 0.103);
+  }
+  100% {
+    opacity: 1;
+  }
+}
